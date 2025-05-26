@@ -1,0 +1,6 @@
+[package]
+name = "generate_rustdoc_json"
+edition = "2024"
+publish = false
+
+[dependencies]

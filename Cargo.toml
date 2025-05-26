@@ -1,3 +1,6 @@
+[workspace]
+members = ["tools/generate_rustdoc_json"]
+
 [package]
 name = "migrate_rustdoc_types"
 version = "0.1.0"
