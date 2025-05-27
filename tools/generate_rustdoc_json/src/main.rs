@@ -1,4 +1,5 @@
 mod discovery;
+mod generate;
 mod toolchains;
 
 fn main() -> anyhow::Result<()> {
@@ -6,6 +7,8 @@ fn main() -> anyhow::Result<()> {
 
     for test in tests {
         self::toolchains::install_toolchain(test.format_version)?;
+
+        self::generate::generate_rustdoc_json(&test)?;
 
         // self::toolchains::uninstall_toolchain(test.format_version)?;
     }
